@@ -17,3 +17,9 @@ import "phoenix_html"
 // import socket from "./socket"
 
 console.log('wut')
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import MainRouter from './main/main_router.js'
+
+ReactDOM.render(<MainRouter />, document.getElementById('mountPoint'))
