@@ -22,6 +22,9 @@ defmodule GearAppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/sign-in", SessionController, :new
+    post "/sign-in", SessionController, :create
+    delete "/sign-out", SessionController, :delete
 
     resources "/users", UserController
   end

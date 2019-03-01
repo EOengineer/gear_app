@@ -8,6 +8,14 @@ defmodule GearApp.Accounts do
 
   alias GearApp.Accounts.User
 
+  def get_by_email(email) when is_nil(email) do
+    nil
+  end
+
+  def get_by_email(email) do
+    Repo.get_by(User, email: email)
+  end
+
   @doc """
   Returns the list of users.
 
